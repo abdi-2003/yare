@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Page Example</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style >
+    /* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 2em; /* 75% larger than default */
+}
+
+.section {
+  display: inline-block;
+  width: 33.33%;
+  padding: 20px;
+   background-color: #f0f0f0; /* Light gray */
+  border: 1px solid black;
+  margin: 0 10px 10px;
+  position: relative; /* For absolute positioning of section title */
+}
+
+.section-title {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #e0e0e0; /* Light gray with a hint of blue */
+  padding: 5px 10px;
+  border: 1px solid black;
+  font-size: 1.25em; /* 25% larger than default */
+}
+
+p {
+  line-height: 1.5;
+}
+
+/* Media Queries for Responsive Design */
+
+/* desktop view (above or equal to 992px) */
+@media screen and (min-width: 992px) {
+.section {
+  width: 30%; /* three sections per row */
+}
+/* Tablet View (768px - 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .section {
+        width: 48%; /* Two sections per row */
+  }
+
+  .section:nth-child(3) {
+    width: 100%; /* Third section takes full width on second row */
+    margin-top: 20px;
+  }
+}
+
+/* Mobile View (less than or equal to 767px) */
+@media screen and (max-width: 767px) {
+  .section {
+    width: 100%; /* Each section takes full width on its own row */
+  }
+}
+  </style>
+</head>
+<body>
+  <h1>Our Delicious Menu</h1>
+  <section class="section">
+    <h2 class="section-title" style="background-color: pink;">chicken</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec diam dui. Donec rutrum congue leo eget malesuada. Nulla facilisi eros in maximus aliquam. Sed vehicula tortor mauris, non congue est vestibulum eget.</p>
+  </section>
+  <section class="section">
+    <h2 class="section-title" style="background-color: red;">beef</h2>
+    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+  </section>
+  <section class="section">
+    <h2 class="section-title" style="background-color: lightyellow;">sushi</h2>
+    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </section>
+</body>
+</html>
